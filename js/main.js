@@ -13,6 +13,11 @@ $(function () {
 
     "use strict";
 
+    // Authentication check
+    if (typeof Auth !== 'undefined') {
+        Auth.checkAuthAndRedirect();
+    }
+
     /***************************
 
     swup
@@ -25,6 +30,17 @@ $(function () {
         animationSelector: '[class="mil-main-transition"]'
     };
     const swup = new Swup(options);
+
+    // Handle page refresh and authentication on swup page change
+    swup.on('contentReplaced', function() {
+        // Refresh the page
+        window.location.reload();
+        
+        // Check authentication
+        if (typeof Auth !== 'undefined') {
+            Auth.checkAuthAndRedirect();
+        }
+    });
 
     /***************************
 

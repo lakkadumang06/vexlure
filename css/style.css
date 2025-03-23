@@ -4820,7 +4820,7 @@ html.is-animating .mil-menu-frame {
 
 .footer {
   position: relative;
-  /* background-image: url(../img/photo/bg-map.webp); */
+  background-image: url(../img/photo/bg-map.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4834,10 +4834,8 @@ html.is-animating .mil-menu-frame {
   position: absolute;
   pointer-events: none;
   z-index: 2;
-  -webkit-backdrop-filter: invert(100%);
-  backdrop-filter: invert(100%);
-  /* background-color: rgba(0, 0, 0, 0.9); */
-}
+  background-color: rgba(0, 0, 0, 0.5);
+} 
 
 .footer .mi-invert-fix {
   height: 100%;
