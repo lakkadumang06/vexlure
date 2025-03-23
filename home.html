@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vexlure International - Leading global agricultural trade company specializing in premium spices, nuts, and agricultural products. Connecting quality producers with international markets.">
+    <meta name="keywords" content="vexlure international, agricultural trade, global agriculture, spice export, premium agricultural products, international trade company, agricultural export, spice trade">
+    <meta name="author" content="Vexlure International">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vexlure International - Global Agricultural Trade Excellence">
+    <meta property="og:description" content="Your trusted partner in global agricultural trade. Premium quality spices, nuts, and agricultural products for international markets.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://vexlureinternational.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vexlure International - Agricultural Trade Excellence">
+    <meta name="twitter:description" content="Global leaders in agricultural trade, offering premium quality products and reliable international trade solutions.">
+    <meta name="twitter:image" content="img/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vexlureinternational.com">
 
     <!-- bootstrap grid css -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
@@ -18,7 +40,12 @@
     <!-- ashley scss -->
     <link rel="stylesheet" href="css/style.css">
     <!-- page name -->
-    <title>Vexlure International</title>
+    <title>Vexlure International - Global Leaders in Agricultural Trade</title>
+
+    <!-- Preload Scripts -->
+    <link rel="preload" href="js/plugins/jquery.min.js" as="script">
+    <link rel="preload" href="js/plugins/swup.min.js" as="script">
+    <link rel="preload" href="js/plugins/gsap.min.js" as="script">
 
 </head>
 
@@ -1024,7 +1051,7 @@
     </div>
     <!-- wrapper end -->
 
-    <!-- jQuery js -->
+    <!-- Scripts -->
     <script src="js/plugins/jquery.min.js"></script>
     <!-- swup js -->
     <script src="js/plugins/swup.min.js"></script>
@@ -1040,6 +1067,82 @@
     <script src="js/plugins/ScrollTrigger.min.js"></script>
     <!-- scroll to js -->
     <script src="js/plugins/ScrollTo.min.js"></script>
+
+    <!-- Initialize Scripts -->
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if scripts are already initialized
+            if (!window.scriptsInitialized) {
+                window.scriptsInitialized = true;
+                
+                // Initialize Swup
+                const swup = new Swup({
+                    animateHistoryBrowsing: true,
+                    cache: true,
+                    containers: ['#swupMain']
+                });
+
+                // Initialize GSAP and ScrollTrigger
+                gsap.registerPlugin(ScrollTrigger);
+                
+                // Initialize Swiper if it exists on the page
+                if (typeof Swiper !== 'undefined') {
+                    const swipers = document.querySelectorAll('.swiper-container');
+                    swipers.forEach(function(swiperElement) {
+                        new Swiper(swiperElement, {
+                            // Your swiper options here
+                            loop: true,
+                            speed: 1000,
+                            // Add other swiper options as needed
+                        });
+                    });
+                }
+
+                // Initialize FancyBox
+                if (typeof $.fancybox !== 'undefined') {
+                    $.fancybox.defaults.hash = false;
+                    $('.mil-portfolio-item').fancybox({
+                        buttons: ['close'],
+                        touch: false,
+                        hash: false,
+                    });
+                }
+
+                // Clean up function for page transitions
+                function cleanupPage() {
+                    // Destroy any existing swipers
+                    const swipers = document.querySelectorAll('.swiper-container');
+                    swipers.forEach(function(swiperElement) {
+                        if (swiperElement.swiper) {
+                            swiperElement.swiper.destroy();
+                        }
+                    });
+                    
+                    // Cleanup GSAP animations
+                    ScrollTrigger.getAll().forEach(t => t.kill());
+                    gsap.killTweensOf('*');
+                }
+
+                // Handle page transitions
+                swup.on('willReplaceContent', cleanupPage);
+                swup.on('contentReplaced', function() {
+                    // Reinitialize components after page transition
+                    window.scrollTo(0, 0);
+                    initializeComponents();
+                });
+            }
+        });
+
+        // Function to initialize all components
+        function initializeComponents() {
+            // Your existing initialization code here
+            if (typeof main !== 'undefined' && typeof main.init === 'function') {
+                main.init();
+            }
+        }
+    </script>
+
     <!-- ashley js -->
     <script src="js/main.js"></script>
 
