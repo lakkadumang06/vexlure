@@ -8,24 +8,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Vexlure International - Leading global agricultural trade company specializing in premium spices, nuts, and agricultural products. Connecting quality producers with international markets.">
-    <meta name="keywords" content="vexlure international, agricultural trade, global agriculture, spice export, premium agricultural products, international trade company, agricultural export, spice trade">
+    <meta name="description"
+        content="Vexlure International - Leading global agricultural trade company specializing in premium spices, nuts, and agricultural products. Connecting quality producers with international markets.">
+    <meta name="keywords"
+        content="vexlure international, agricultural trade, global agriculture, spice export, premium agricultural products, international trade company, agricultural export, spice trade">
     <meta name="author" content="Vexlure International">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Vexlure International - Global Agricultural Trade Excellence">
-    <meta property="og:description" content="Your trusted partner in global agricultural trade. Premium quality spices, nuts, and agricultural products for international markets.">
+    <meta property="og:description"
+        content="Your trusted partner in global agricultural trade. Premium quality spices, nuts, and agricultural products for international markets.">
     <meta property="og:image" content="img/logo.png">
     <meta property="og:url" content="https://vexlureinternational.com">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vexlure International - Agricultural Trade Excellence">
-    <meta name="twitter:description" content="Global leaders in agricultural trade, offering premium quality products and reliable international trade solutions.">
+    <meta name="twitter:description"
+        content="Global leaders in agricultural trade, offering premium quality products and reliable international trade solutions.">
     <meta name="twitter:image" content="img/logo.png">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://vexlureinternational.com">
 
@@ -828,10 +832,17 @@
 
                                     <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
 
-                                    <form class="mil-subscribe-form mil-up">
-                                        <input type="text" placeholder="Enter Your email">
-                                        <button type="submit"
-                                            class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                    <form class="mil-subscribe-form mil-up" id="newsletterForm">
+                                        <input type="email" id="newsletterEmail" name="email"
+                                            placeholder="Enter Your email" required>
+                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"
+                                            id="newsletterSubmit">
+                                            <span class="mil-arrow"></span>
+                                        </button>
+                                        <div class="mil-newsletter-messages" style="display: none;">
+                                            <div class="mil-newsletter-success" style="display: none;"></div>
+                                            <div class="mil-newsletter-error" style="display: none;"></div>
+                                        </div>
                                     </form>
 
                                 </div>
@@ -1071,11 +1082,11 @@
     <!-- Initialize Scripts -->
     <script>
         // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Check if scripts are already initialized
             if (!window.scriptsInitialized) {
                 window.scriptsInitialized = true;
-                
+
                 // Initialize Swup
                 const swup = new Swup({
                     animateHistoryBrowsing: true,
@@ -1085,11 +1096,11 @@
 
                 // Initialize GSAP and ScrollTrigger
                 gsap.registerPlugin(ScrollTrigger);
-                
+
                 // Initialize Swiper if it exists on the page
                 if (typeof Swiper !== 'undefined') {
                     const swipers = document.querySelectorAll('.swiper-container');
-                    swipers.forEach(function(swiperElement) {
+                    swipers.forEach(function (swiperElement) {
                         new Swiper(swiperElement, {
                             // Your swiper options here
                             loop: true,
@@ -1113,12 +1124,12 @@
                 function cleanupPage() {
                     // Destroy any existing swipers
                     const swipers = document.querySelectorAll('.swiper-container');
-                    swipers.forEach(function(swiperElement) {
+                    swipers.forEach(function (swiperElement) {
                         if (swiperElement.swiper) {
                             swiperElement.swiper.destroy();
                         }
                     });
-                    
+
                     // Cleanup GSAP animations
                     ScrollTrigger.getAll().forEach(t => t.kill());
                     gsap.killTweensOf('*');
@@ -1126,7 +1137,7 @@
 
                 // Handle page transitions
                 swup.on('willReplaceContent', cleanupPage);
-                swup.on('contentReplaced', function() {
+                swup.on('contentReplaced', function () {
                     // Reinitialize components after page transition
                     window.scrollTo(0, 0);
                     initializeComponents();

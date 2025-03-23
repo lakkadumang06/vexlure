@@ -1,14 +1,3 @@
-/* -------------------------------------------
-
-Name: 		Ruizarch
-Version:    1.0
-Developer:	Nazar Miller (millerDigitalDesign)
-Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
-
-p.s. I am available for Freelance hire (UI design, web development). email: miller.themes@gmail.com
-
-------------------------------------------- */
-
 $(function () {
 
     "use strict";
@@ -18,11 +7,182 @@ $(function () {
         Auth.checkAuthAndRedirect();
     }
 
+    // Newsletter subscription form handler
+    $(document).ready(function () {
+        const newsletterForm = $('#newsletterForm');
+        if (!newsletterForm.length) return; // Only proceed if newsletter form exists
+
+        function handleNewsletterSubmission(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            const emailInput = $('#newsletterEmail');
+            const submitButton = $('#newsletterSubmit');
+            const email = emailInput.val().trim();
+            const successMessage = $('.mil-newsletter-success');
+            const errorMessage = $('.mil-newsletter-error');
+            const messagesContainer = $('.mil-newsletter-messages');
+
+            // Reset messages
+            successMessage.hide();
+            errorMessage.hide();
+            messagesContainer.hide();
+
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                errorMessage.text('Please enter a valid email address').show();
+                messagesContainer.show();
+                emailInput.addClass('mil-error');
+                return false;
+            }
+
+            // Remove error class if exists
+            emailInput.removeClass('mil-error');
+
+            // Disable button and show loading state
+            submitButton.prop('disabled', true);
+            submitButton.addClass('mil-loading');
+
+            // Make API call
+            fetch('http://localhost:3000/sendmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                mode: 'cors',
+                credentials: 'same-origin',
+                body: JSON.stringify({ email })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Clear input and show success message
+                    emailInput.val('');
+                    successMessage.text('Thank you for subscribing to our newsletter!').show();
+                    messagesContainer.show();
+                })
+                .catch(error => {
+                    console.error('Newsletter subscription error:', error);
+                    errorMessage.text(error.message || 'Failed to subscribe. Please try again.').show();
+                    messagesContainer.show();
+                    emailInput.addClass('mil-error');
+                })
+                .finally(() => {
+                    // Re-enable button and remove loading state
+                    submitButton.prop('disabled', false);
+                    submitButton.removeClass('mil-loading');
+
+                    // Hide messages after 5 seconds
+                    setTimeout(() => {
+                        messagesContainer.fadeOut();
+                        successMessage.hide();
+                        errorMessage.hide();
+                        emailInput.removeClass('mil-error');
+                    }, 5000);
+                });
+
+            return false;
+        }
+
+        // Attach both submit and click handlers
+        newsletterForm.on('submit', handleNewsletterSubmission);
+        $('#newsletterSubmit').on('click', handleNewsletterSubmission);
+
+        // Remove error class on input
+        $('#newsletterEmail').on('input', function () {
+            $(this).removeClass('mil-error');
+        });
+    });
+
+    // Contact form handler
+    $(document).ready(function () {
+        const form = $('#contactForm');
+        if (!form.length) return; // Only proceed if contact form exists
+
+        const submitButton = $('#submitButton');
+        const successMessage = $('#successMessage');
+        const errorMessage = $('#errorMessage');
+        const formMessages = $('#formMessages');
+
+        form.on('submit', async function (e) {
+            e.preventDefault();
+
+            // Disable submit button and show loading state
+            submitButton.prop('disabled', true);
+            submitButton.html('<span>Sending...</span>');
+
+            // Collect form data
+            const formData = {
+                name: $('#name').val(),
+                companyName: $('#companyName').val(),
+                email: $('#email').val(),
+                phone: $('#phone').val(),
+                message: $('#message').val()
+            };
+
+            try {
+                const response = await fetch('http://localhost:3000/sendmailinfo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
+                    },
+                    mode: 'cors',
+                    credentials: 'same-origin',
+                    body: JSON.stringify(formData)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Show success message
+                formMessages.show();
+                successMessage.show();
+                errorMessage.hide();
+                form[0].reset(); // Clear the form
+            } catch (error) {
+                console.error('Error:', error);
+                // Show error message
+                formMessages.show();
+                errorMessage.show();
+                successMessage.hide();
+                errorMessage.text('There was an error sending your message: ' + (error.message || 'Network error occurred'));
+            } finally {
+                // Re-enable submit button
+                submitButton.prop('disabled', false);
+                submitButton.html('<span>Send message</span>');
+            }
+        });
+
+        // Add basic form validation
+        const inputs = form.find('input, textarea');
+        inputs.each(function () {
+            $(this).on('invalid', function (e) {
+                e.preventDefault();
+                $(this).addClass('mil-error');
+            });
+
+            $(this).on('input', function () {
+                if ($(this).hasClass('mil-error')) {
+                    $(this).removeClass('mil-error');
+                }
+            });
+        });
+    });
+
     /***************************
-
-    swup
-
-    ***************************/
+       swup
+   
+       ***************************/
     const options = {
         containers: ['#swupMain', '#swupMenu'],
         animateHistoryBrowsing: true,
@@ -32,10 +192,10 @@ $(function () {
     const swup = new Swup(options);
 
     // Handle page refresh and authentication on swup page change
-    swup.on('contentReplaced', function() {
+    swup.on('contentReplaced', function () {
         // Refresh the page
         window.location.reload();
-        
+
         // Check authentication
         if (typeof Auth !== 'undefined') {
             Auth.checkAuthAndRedirect();

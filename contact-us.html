@@ -233,23 +233,34 @@
                 <!-- contact form -->
                 <section id="contact">
                     <div class="container mil-p-60-90">
-                        <!-- <h3 class="mil-center mil-up mil-mb-120">Let's <span class="mil-thin">Talk</span></h3> -->
-                        <form class="row align-items-center">
+                        <!-- Success/Error messages -->
+                        <div id="formMessages" class="mil-mb-30" style="display: none;">
+                            <div id="successMessage" class="alert alert-success" style="display: none;">
+                                Your message has been sent successfully!
+                            </div>
+                            <div id="errorMessage" class="alert alert-danger" style="display: none;">
+                                There was an error sending your message. Please try again.
+                            </div>
+                        </div>
+
+                        <form id="contactForm" class="row align-items-center">
                             <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="enter your name">
+                                <input type="text" id="name" name="name" placeholder="enter your name" required>
                             </div>
                             <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="enter your company's name">
+                                <input type="text" id="companyName" name="companyName"
+                                    placeholder="enter your company's name" required>
                             </div>
                             <div class="col-lg-6 mil-up">
-                                <input type="email" placeholder="enter your email">
+                                <input type="email" id="email" name="email" placeholder="enter your email" required>
                             </div>
                             <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="enter your phone number">
+                                <input type="text" id="phone" name="phone" placeholder="enter your phone number"
+                                    required>
                             </div>
                             <div class="col-lg-12 mil-up">
-                                <textarea placeholder="what would you like to know about?" rows="5"
-                                    class="mil-textarea"></textarea>
+                                <textarea id="message" name="message" placeholder="what would you like to know about?"
+                                    rows="5" class="mil-textarea" required></textarea>
                             </div>
                             <div class="col-lg-8">
                                 <p class="mil-up mil-mb-30"><span class="mil-accent">*</span> We promise not to disclose
@@ -257,7 +268,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="mil-adaptive-right mil-up mil-mb-30">
-                                    <button type="submit" class="mil-button mil-arrow-place">
+                                    <button type="submit" class="mil-button mil-arrow-place" id="submitButton">
                                         <span>Send message</span>
                                     </button>
                                 </div>
@@ -321,266 +332,272 @@
                     </div>
                 </section>
 
-        <!-- map -->
-        <section>
-            <!-- <h3 class="mil-center mil-up mil-mb-120">Let's <span class="mil-thin">Talk</span></h3> -->
-            <div class="container">
-                <div class="row mil-p-0-90">
-                    <div class="col-md-6 mil-mb-60 text-center">
-                        <!-- <div class="mil-map-frame"> -->
-                            <div class="mil-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.534507492867!2d72.84655649999999!3d21.210642999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f3d2c56110b%3A0x6772f26361354ba4!2sVexlure%20International!5e0!3m2!1sen!2sin!4v1742714663303!5m2!1sen!2sin" width="600" height="600" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade " loading="eager"></iframe>
-                            </div>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-md-6 mil-mb-60 text-center">
-                        <!-- <div class="mil-map-frame"> -->
-                            <div class="mil-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.168199500493!2d11.474716176313!3d48.10699097124008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd85480e65ac9%3A0x970bc10b039fd3cf!2sHeiglhofstra%C3%9Fe%2066%2C%2081377%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sin!4v1742575590974!5m2!1sen!2sin"
-                                    width="100%" height="600" style="border:0;" allowfullscreen="" 
-                                    referrerpolicy="no-referrer-when-downgrade " loading="eager">
-                                </iframe>
-                            </div>
-                        <!-- </div> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- map end -->
-
-
-
-        <!-- footer -->
-        <footer class="footer ">
-            <div class="mi-invert-fix">
-                <div class="container mil-p-120-60">
-                    <div class="row justify-content-between">
-                        <div class="col-md-4 col-lg-4 mil-mb-60">
-
-                            <div class="mil-muted mil-logo mil-up mil-mb-30">Vexlure International</div>
-
-                            <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
-
-                            <form class="mil-subscribe-form mil-up">
-                                <input type="text" placeholder="Enter Your email">
-                                <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                            </form>
-
-                        </div>
-                        <div class="col-md-7 col-lg-6">
-                            <div class="row justify-content-end">
-                                <div class="col-md-6 col-lg-7">
-
-                                    <nav class="mil-footer-menu mil-mb-60">
-                                        <ul>
-                                            <li class="mil-up">
-                                                <a href="home.html">Home</a>
-                                            </li>
-                                            <li class="mil-up">
-                                                <a href="product.html">Products</a>
-                                            </li>
-                                            <li class="mil-up ">
-                                                <a href="about-us.html">About us</a>
-                                            </li>
-                                            <li class="mil-up  mil-active">
-                                                <a href="contact-us.html">Contact us</a>
-                                            </li>
-                                            <li class="mil-up">
-                                                <a href="blog.html">Blog</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-
+                <!-- map -->
+                <section>
+                    <!-- <h3 class="mil-center mil-up mil-mb-120">Let's <span class="mil-thin">Talk</span></h3> -->
+                    <div class="container">
+                        <div class="row mil-p-0-90">
+                            <div class="col-md-6 mil-mb-60 text-center">
+                                <!-- <div class="mil-map-frame"> -->
+                                <div class="mil-map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.534507492867!2d72.84655649999999!3d21.210642999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f3d2c56110b%3A0x6772f26361354ba4!2sVexlure%20International!5e0!3m2!1sen!2sin!4v1742714663303!5m2!1sen!2sin"
+                                        width="600" height="600" style="border:0;" allowfullscreen=""
+                                        referrerpolicy="no-referrer-when-downgrade " loading="eager"></iframe>
                                 </div>
-                                <div class="col-md-6 col-lg-5">
-
-                                    <ul class="mil-menu-list mil-up mil-mb-60">
-                                        <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                        <li><a href="#." class="mil-light-soft">Terms & Conditions</a></li>
-                                        <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                        <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                    </ul>
-
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-md-6 mil-mb-60 text-center">
+                                <!-- <div class="mil-map-frame"> -->
+                                <div class="mil-map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.168199500493!2d11.474716176313!3d48.10699097124008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd85480e65ac9%3A0x970bc10b039fd3cf!2sHeiglhofstra%C3%9Fe%2066%2C%2081377%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sin!4v1742575590974!5m2!1sen!2sin"
+                                        width="100%" height="600" style="border:0;" allowfullscreen=""
+                                        referrerpolicy="no-referrer-when-downgrade " loading="eager">
+                                    </iframe>
                                 </div>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <div class="row justify-content-between flex-sm-row-reverse">
-                        <div class="col-md-7 col-lg-6">
+                <!-- map end -->
 
+
+
+                <!-- footer -->
+                <footer class="footer ">
+                    <div class="mi-invert-fix">
+                        <div class="container mil-p-120-60">
                             <div class="row justify-content-between">
+                                <div class="col-md-4 col-lg-4 mil-mb-60">
 
-                                <div class="col-md-6 col-lg-5 mil-mb-60">
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30">Vexlure International</div>
 
-                                    <h6 class="mil-muted mil-up mil-mb-30">India</h6>
+                                    <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
 
-                                    <p class="mil-light-soft mil-up">Patel Chambers 108, <br />395006 Surat.
-                                        <span class="mil-no-wrap">+91 83206 59236</span>
-                                    </p>
+                                    <form class="mil-subscribe-form mil-up" id="newsletterForm"
+                                        onsubmit="return false;">
+                                        <input type="email" id="newsletterEmail" name="email"
+                                            placeholder="Enter Your email" required>
+                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"
+                                            id="newsletterSubmit">
+                                            <span class="mil-arrow"></span>
+                                        </button>
+                                        <div class="mil-newsletter-messages" style="display: none;">
+                                            <div class="mil-newsletter-success" style="display: none;"></div>
+                                            <div class="mil-newsletter-error" style="display: none;"></div>
+                                        </div>
+                                    </form>
 
                                 </div>
-                                <div class="col-md-6 col-lg-5 mil-mb-60">
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row justify-content-end">
+                                        <div class="col-md-6 col-lg-7">
 
-                                    <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
+                                            <nav class="mil-footer-menu mil-mb-60">
+                                                <ul>
+                                                    <li class="mil-up">
+                                                        <a href="home.html">Home</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="product.html">Products</a>
+                                                    </li>
+                                                    <li class="mil-up ">
+                                                        <a href="about-us.html">About us</a>
+                                                    </li>
+                                                    <li class="mil-up  mil-active">
+                                                        <a href="contact-us.html">Contact us</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="blog.html">Blog</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
 
-                                    <p class="mil-light-soft mil-up">Heiglhofstraße 66, <br /> 81377 Munich.
-                                        <span class="mil-no-wrap">+49 15566 345594</span>
-                                    </p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-5">
 
+                                            <ul class="mil-menu-list mil-up mil-mb-60">
+                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
+                                                <li><a href="#." class="mil-light-soft">Terms & Conditions</a></li>
+                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
+                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="col-md-4 col-lg-6 mil-mb-60">
+                            <div class="row justify-content-between flex-sm-row-reverse">
+                                <div class="col-md-7 col-lg-6">
 
-                            <div class="mil-vert-between">
-                                <div class="mil-mb-30">
-                                    <ul class="mil-social-icons mil-up">
-                                        <li><a href="#." target="_blank" class="social-icon"> <i
-                                                    class="far fa-circle"></i></a></li>
-                                        <li><a href="#." target="_blank" class="social-icon"> <i
-                                                    class="far fa-circle"></i></a></li>
-                                        <li><a href="#." target="_blank" class="social-icon"> <i
-                                                    class="far fa-circle"></i></a></li>
-                                        <li><a href="#." target="_blank" class="social-icon"> <i
-                                                    class="far fa-circle"></i></a></li>
-                                    </ul>
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-up mil-mb-30">India</h6>
+
+                                            <p class="mil-light-soft mil-up">Patel Chambers 108, <br />395006 Surat.
+                                                <span class="mil-no-wrap">+91 83206 59236</span>
+                                            </p>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
+
+                                            <p class="mil-light-soft mil-up">Heiglhofstraße 66, <br /> 81377 Munich.
+                                                <span class="mil-no-wrap">+49 15566 345594</span>
+                                            </p>
+
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <p class="mil-light-soft mil-up">© Copyright 2025 - Vexlure International, All
-                                    Rights Reserved.
-                                </p>
-                            </div>
+                                <div class="col-md-4 col-lg-6 mil-mb-60">
 
+                                    <div class="mil-vert-between">
+                                        <div class="mil-mb-30">
+                                            <ul class="mil-social-icons mil-up">
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="far fa-circle"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="mil-light-soft mil-up">© Copyright 2025 - Vexlure International, All
+                                            Rights Reserved.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </footer>
+                <!-- footer end -->
+
+                <!-- hidden elements -->
+                <div class="mil-hidden-elements">
+                    <div class="mil-dodecahedron">
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
+                        <path
+                            d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                    </svg>
+
+                    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="mil-lines">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"
+                            class="mil-move" />
+                    </svg>
                 </div>
+                <!-- hidden elements end -->
+
             </div>
-        </footer>
-        <!-- footer end -->
-
-        <!-- hidden elements -->
-        <div class="mil-hidden-elements">
-            <div class="mil-dodecahedron">
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="mil-pentagon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
-                <path
-                    d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
-            </svg>
-
-            <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
-                    class="mil-move" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
-                    class="mil-move" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
-                    class="mil-move" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
-                    class="mil-move" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"
-                    class="mil-move" />
-            </svg>
         </div>
-        <!-- hidden elements end -->
-
-    </div>
-    </div>
-    <!-- content -->
+        <!-- content -->
     </div>
     <!-- wrapper end -->
 

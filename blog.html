@@ -427,10 +427,17 @@
                                 Insights and <span class="mil-thin">Market Updates</span></h2>
                             <div class="row justify-content-center mil-up">
                                 <div class="col-lg-4">
-                                    <form class="mil-subscribe-form mil-subscribe-form-2 mil-up">
-                                        <input type="text" placeholder="Enter Your email">
-                                        <button type="submit"
-                                            class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                    <form class="mil-subscribe-form mil-up" id="newsletterForm">
+                                        <input type="email" id="newsletterEmail" name="email"
+                                            placeholder="Enter Your email" required>
+                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"
+                                            id="newsletterSubmit">
+                                            <span class="mil-arrow"></span>
+                                        </button>
+                                        <div class="mil-newsletter-messages" style="display: none;">
+                                            <div class="mil-newsletter-success" style="display: none;"></div>
+                                            <div class="mil-newsletter-error" style="display: none;"></div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -450,10 +457,17 @@
 
                                     <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
 
-                                    <form class="mil-subscribe-form mil-up">
-                                        <input type="text" placeholder="Enter Your email">
-                                        <button type="submit"
-                                            class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                    <form class="mil-subscribe-form mil-up" id="newsletterForm">
+                                        <input type="email" id="newsletterEmail" name="email"
+                                            placeholder="Enter Your email" required>
+                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"
+                                            id="newsletterSubmit">
+                                            <span class="mil-arrow"></span>
+                                        </button>
+                                        <div class="mil-newsletter-messages" style="display: none;">
+                                            <div class="mil-newsletter-success" style="display: none;"></div>
+                                            <div class="mil-newsletter-error" style="display: none;"></div>
+                                        </div>
                                     </form>
 
                                 </div>
