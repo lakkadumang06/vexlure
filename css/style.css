@@ -37,13 +37,13 @@ body {
 }
 
 *::-moz-selection {
-  color: inherit;
-  background-color: transparent;
+  color: #ffffff;
+  background-color: rgba(255, 152, 0, 0.9);
 }
 
 *::selection {
-  color: inherit;
-  background-color: transparent;
+  color: #ffffff;
+  background-color: rgba(255, 152, 0, 0.9);
 }
 
 .mil-wrapper {
@@ -4872,4 +4872,45 @@ html.is-animating .mil-menu-frame {
   to {
     transform: rotate(360deg);
   }
+}
+
+.mil-product-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mil-product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mil-product-image {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.mil-product-card:hover .mil-product-image img {
+  transform: scale(1.1);
+}
+
+.mil-rounded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.mil-product-title {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }

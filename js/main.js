@@ -223,65 +223,77 @@ $(function () {
     preloader
     
     ***************************/
-
     var timeline = gsap.timeline();
 
     timeline.to(".mil-preloader-animation", {
         opacity: 1,
+        duration: 1, // Increased duration
     });
 
     timeline.fromTo(
-        ".mil-animation-1 .mil-h3", {
-        y: "30px",
-        opacity: 0
-    }, {
-        y: "0px",
-        opacity: 1,
-        stagger: 0.4
-    },
+        ".mil-animation-1 .mil-h3",
+        {
+            y: "30px",
+            opacity: 0
+        },
+        {
+            y: "0px",
+            opacity: 1,
+            stagger: 0.6, // Increased stagger for smoother entry
+            duration: 1 // Slower animation
+        }
     );
 
     timeline.to(".mil-animation-1 .mil-h3", {
         opacity: 0,
         y: '-30',
-    }, "+=.3");
+        duration: 0.6 // Slower fade-out
+    }, "+=.5"); // Added more delay
 
-    timeline.fromTo(".mil-reveal-box", 0.1, {
+    timeline.fromTo(".mil-reveal-box", 0.3, { // Increased from 0.1
         opacity: 0,
     }, {
         opacity: 1,
         x: '-30',
+        duration: 0.6 // Slower transition
     });
 
-    timeline.to(".mil-reveal-box", 0.45, {
+    timeline.to(".mil-reveal-box", 0.6, { // Increased from 0.45
         width: "100%",
         x: 0,
-    }, "+=.1");
+    }, "+=.2"); // Slightly increased delay
+
     timeline.to(".mil-reveal-box", {
-        right: "0"
+        right: "0",
+        duration: 0.5 // Added smooth transition
     });
-    timeline.to(".mil-reveal-box", 0.3, {
+
+    timeline.to(".mil-reveal-box", 0.5, { // Increased from 0.3
         width: "0%"
     });
+
     timeline.fromTo(".mil-animation-2 .mil-h3", {
         opacity: 0,
     }, {
         opacity: 1,
-    }, "-=.5");
-    timeline.to(".mil-animation-2 .mil-h3", 0.6, {
+        duration: 1
+    }, "-=.4");
+
+    timeline.to(".mil-animation-2 .mil-h3", 0.8, { // Increased from 0.6
         opacity: 0,
         y: '-30'
-    }, "+=.5");
-    timeline.to(".mil-preloader", 0.8, {
+    }, "+=.6"); // Added more delay
+
+    timeline.to(".mil-preloader", 1, { // Increased from 0.8
         opacity: 0,
-        ease: 'sine',
-    }, "+=.2");
-    timeline.fromTo(".mil-up", 0.8, {
+        ease: 'power2.out',
+    }, "+=.4");
+
+    timeline.fromTo(".mil-up", 1, { // Increased from 0.8
         opacity: 0,
         y: 40,
         scale: .98,
-        ease: 'sine',
-
+        ease: 'power2.out',
     }, {
         y: 0,
         opacity: 1,
@@ -289,7 +301,8 @@ $(function () {
         onComplete: function () {
             $('.mil-preloader').addClass("mil-hidden");
         },
-    }, "-=1");
+    }, "-=0.8"); // Adjusted delay
+
     /***************************
 
     anchor scroll
