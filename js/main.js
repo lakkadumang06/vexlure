@@ -47,7 +47,7 @@ $(function () {
             submitButton.addClass('mil-loading');
 
             // Make API call
-            fetch('http://localhost:3000/sendmail', {
+            fetch('https://vexlure-server.onrender.com/sendmail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ $(function () {
             };
 
             try {
-                const response = await fetch('http://localhost:3000/sendmailinfo', {
+                const response = await fetch('https://vexlure-server.onrender.com/sendmailinfo', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -227,7 +227,7 @@ $(function () {
 
     timeline.to(".mil-preloader-animation", {
         opacity: 1,
-        duration: 1, // Increased duration
+        duration: 0.8,
     });
 
     timeline.fromTo(
@@ -239,36 +239,36 @@ $(function () {
         {
             y: "0px",
             opacity: 1,
-            stagger: 0.6, // Increased stagger for smoother entry
-            duration: 1 // Slower animation
+            stagger: 0.4,
+            duration: 0.8
         }
     );
 
     timeline.to(".mil-animation-1 .mil-h3", {
         opacity: 0,
         y: '-30',
-        duration: 0.6 // Slower fade-out
-    }, "+=.5"); // Added more delay
+        duration: 0.4
+    }, "+=.5");
 
-    timeline.fromTo(".mil-reveal-box", 0.3, { // Increased from 0.1
+    timeline.fromTo(".mil-reveal-box", 0.3, {
         opacity: 0,
     }, {
         opacity: 1,
         x: '-30',
-        duration: 0.6 // Slower transition
+        duration: 0.6
     });
 
-    timeline.to(".mil-reveal-box", 0.6, { // Increased from 0.45
+    timeline.to(".mil-reveal-box", 0.6, {
         width: "100%",
         x: 0,
-    }, "+=.2"); // Slightly increased delay
+    }, "+=.2");
 
     timeline.to(".mil-reveal-box", {
         right: "0",
-        duration: 0.5 // Added smooth transition
+        duration: 0.5
     });
 
-    timeline.to(".mil-reveal-box", 0.5, { // Increased from 0.3
+    timeline.to(".mil-reveal-box", 0.5, {
         width: "0%"
     });
 
@@ -276,20 +276,20 @@ $(function () {
         opacity: 0,
     }, {
         opacity: 1,
-        duration: 1
+        duration: 0.5
     }, "-=.4");
 
-    timeline.to(".mil-animation-2 .mil-h3", 0.8, { // Increased from 0.6
+    timeline.to(".mil-animation-2 .mil-h3", 0.5, {
         opacity: 0,
         y: '-30'
-    }, "+=.6"); // Added more delay
+    }, "+=.6");
 
-    timeline.to(".mil-preloader", 1, { // Increased from 0.8
+    timeline.to(".mil-preloader", 1, {
         opacity: 0,
         ease: 'power2.out',
     }, "+=.4");
 
-    timeline.fromTo(".mil-up", 1, { // Increased from 0.8
+    timeline.fromTo(".mil-up", 1, {
         opacity: 0,
         y: 40,
         scale: .98,
@@ -301,7 +301,7 @@ $(function () {
         onComplete: function () {
             $('.mil-preloader').addClass("mil-hidden");
         },
-    }, "-=0.8"); // Adjusted delay
+    }, "-=0.8");
 
     /***************************
 
@@ -366,16 +366,16 @@ $(function () {
             .timeline()
             .from(box, {
                 height: 0,
-                duration: 0.4,
+                duration: 0.2,
                 ease: "sine"
             })
             .from(minusElement, {
-                duration: 0.4,
+                duration: 0.2,
                 autoAlpha: 0,
                 ease: "none",
             }, 0)
             .to(plusElement, {
-                duration: 0.4,
+                duration: 0.2,
                 autoAlpha: 0,
                 ease: "none",
             }, 0)
@@ -589,20 +589,28 @@ $(function () {
 
     const appearance = document.querySelectorAll(".mil-up");
 
+    // Set initial state to prevent blinking
     appearance.forEach((section) => {
-        gsap.fromTo(section, {
+        gsap.set(section, {
             opacity: 0,
             y: 40,
-            scale: .98,
-            ease: 'sine',
+            scale: 0.98,
+            visibility: 'hidden'
+        });
+    });
 
-        }, {
-            y: 0,
+    // Trigger animation when elements are in view
+    appearance.forEach((section) => {
+        gsap.to(section, {
             opacity: 1,
+            y: 0,
             scale: 1,
-            duration: .4,
+            visibility: 'visible',
+            duration: 0.6,
+            ease: 'power2.out',
             scrollTrigger: {
                 trigger: section,
+                start: 'top 80%',
                 toggleActions: 'play none none reverse',
             }
         });
@@ -705,8 +713,26 @@ $(function () {
             nextEl: '.mil-revi-next',
             prevEl: '.mil-revi-prev',
         },
-    })
-
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+            },
+            992: {
+                slidesPerView: 1,
+            },
+        },
+        on: {
+            init: function () {
+                // Ensure we only show the correct number of slides
+                const slides = document.querySelectorAll('.mil-reviews-slider .swiper-slide');
+                slides.forEach((slide, index) => {
+                    if (index >= 7) {
+                        slide.style.display = 'none';
+                    }
+                });
+            }
+        }
+    });
     /***************************
 
     infinite slider
@@ -727,6 +753,18 @@ $(function () {
                 slidesPerView: 4,
             },
         },
+        on: {
+            init: function () {
+                // Ensure we only show the correct number of slides
+                const slides = document.querySelectorAll('.mil-reviews-slider .swiper-slide');
+                slides.forEach((slide, index) => {
+                    if (index >= 7) {
+                        slide.style.display = 'none';
+                    }
+                });
+            }
+        }
+
     });
 
     /***************************
@@ -1030,20 +1068,28 @@ $(function () {
 
         const appearance = document.querySelectorAll(".mil-up");
 
+        // Set initial state to prevent blinking
         appearance.forEach((section) => {
-            gsap.fromTo(section, {
+            gsap.set(section, {
                 opacity: 0,
                 y: 40,
-                scale: .98,
-                ease: 'sine',
+                scale: 0.98,
+                visibility: 'hidden'
+            });
+        });
 
-            }, {
-                y: 0,
+        // Trigger animation when elements are in view
+        appearance.forEach((section) => {
+            gsap.to(section, {
                 opacity: 1,
+                y: 0,
                 scale: 1,
-                duration: .4,
+                visibility: 'visible',
+                duration: 0.6,
+                ease: 'power2.out',
                 scrollTrigger: {
                     trigger: section,
+                    start: 'top 80%',
                     toggleActions: 'play none none reverse',
                 }
             });
