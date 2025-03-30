@@ -4922,6 +4922,14 @@ html.is-animating .mil-menu-frame {
   }
 
   .mil-mb-60 {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 376px) {
+
+
+  .mil-mb-60 {
     margin-bottom: 0px !important;
   }
 }
