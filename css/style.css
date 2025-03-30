@@ -4914,3 +4914,14 @@ html.is-animating .mil-menu-frame {
   font-weight: bold;
   color: #333;
 }
+
+/* small-pb-0 */
+@media (max-width: 376px) {
+  .mil-banner .mil-banner-content {
+    padding-bottom: 0px !important;
+  }
+
+  .mil-mb-60 {
+    margin-bottom: 0px !important;
+  }
+}
