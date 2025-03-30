@@ -4916,7 +4916,7 @@ html.is-animating .mil-menu-frame {
 }
 
 /* small-pb-0 */
-@media (max-width: 376px) {
+@media (max-width: 434px) {
   .mil-banner .mil-banner-content {
     padding-bottom: 0px !important;
   }
