@@ -833,6 +833,67 @@ $(function () {
         },
     });
 
+    /***************************
+    product slider
+    ***************************/
+    const productSliderContent = document.querySelector('.product-slider-content');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const cardWidth = document.querySelector('.product-card').offsetWidth + 30; // 30 is the gap
+    let currentPosition = 0;
+
+    if (productSliderContent && prevBtn && nextBtn) {
+        // Function to update button states
+        function updateButtonStates() {
+            const maxScroll = productSliderContent.scrollWidth - productSliderContent.clientWidth;
+            prevBtn.style.display = currentPosition <= 0 ? 'none' : 'flex';
+            nextBtn.style.display = currentPosition >= maxScroll ? 'none' : 'flex';
+        }
+
+        // Function to slide
+        function slide(direction) {
+            const maxScroll = productSliderContent.scrollWidth - productSliderContent.clientWidth;
+            if (direction === 'next' && currentPosition < maxScroll) {
+                currentPosition = Math.min(currentPosition + cardWidth, maxScroll);
+            } else if (direction === 'prev' && currentPosition > 0) {
+                currentPosition = Math.max(currentPosition - cardWidth, 0);
+            }
+            productSliderContent.scrollTo({
+                left: currentPosition,
+                behavior: 'smooth'
+            });
+            updateButtonStates();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => slide('prev'));
+        nextBtn.addEventListener('click', () => slide('next'));
+
+        // Update button states on scroll
+        productSliderContent.addEventListener('scroll', () => {
+            currentPosition = productSliderContent.scrollLeft;
+            updateButtonStates();
+        });
+
+        // Initial button states
+        updateButtonStates();
+    }
+
+    // Pause autoplay on hover
+    const productSlider = document.querySelector('.product-slider');
+    if (productSlider) {
+        productSwiper.autoplay.stop();
+    }
+
+    // Reinitialize slider after page load
+    document.addEventListener('DOMContentLoaded', function () {
+        if (productSwiper) {
+            productSwiper.update();
+            productSwiper.pagination.render();
+            productSwiper.pagination.update();
+        }
+    });
+
     /*----------------------------------------------------------
     ------------------------------------------------------------
 
