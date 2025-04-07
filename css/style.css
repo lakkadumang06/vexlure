@@ -5003,9 +5003,8 @@ html.is-animating .mil-menu-frame {
   /* Added z-index */
 }
 
-.product-card {
+/* .product-card {
   flex: 0 0 calc(25% - 22.5px);
-  background: #fff;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -5017,28 +5016,28 @@ html.is-animating .mil-menu-frame {
 .product-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-}
+} */
 
 .product-image {
-  position: relative;
-  width: 100%;
-  height: 280px;
+  width: 200px;
+  /* or any size you want, like 250px, 300px, etc. */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: #f8f9fa;
-  /* padding: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* optional: center the image */
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
   transition: transform 0.5s ease;
-  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
 }
 
-.product-card:hover .product-image img {
-  transform: scale(1.1);
-}
 
 .product-info {
   padding: 25px;
@@ -5118,7 +5117,7 @@ html.is-animating .mil-menu-frame {
 }
 
 @media (max-width: 768px) {
-  .product-card {
+  /* .product-card {
     flex: 0 0 calc(50% - 22.5px);
     background: #fff;
     border-radius: 20px;
@@ -5127,7 +5126,7 @@ html.is-animating .mil-menu-frame {
     transition: all 0.4s ease;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.05);
-  }
+  } */
 
   .slider-nav-btn {
     width: 40px;
@@ -5145,7 +5144,159 @@ html.is-animating .mil-menu-frame {
 }
 
 @media (max-width: 434px) {
-  .product-card {
+  /* .product-card {
     flex: 0 0 calc(100% - 22.5px);
+  } */
+}
+
+.mil-frame-top {
+  width: 100%;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+.mil-frame-top.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fully rounded circular images */
+.product-img-container {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 8px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-img-container:hover {
+  transform: scale(1.05);
+}
+
+/* Header margin adjustment */
+.mil-banner-content h1 {
+  margin-top: 50px !important;
+}
+
+/* List styling */
+.list-group-item {
+  border: none;
+  padding: 0.75rem 0;
+  color: #333;
+  background-color: transparent !important;
+}
+
+/* Section styling */
+h3 {
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 1.5rem !important;
+}
+
+section.py-5 {
+  background-color: #ffffff;
+  padding: 4rem 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .product-img-container {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .flex-md-row-reverse {
+    flex-direction: column;
+  }
+
+  .product-img-container {
+    width: 220px;
+    height: 220px;
+    border-width: 5px;
+  }
+
+  .mil-banner-content h1 {
+    margin-top: 15px !important;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product-img-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+.product-img-container {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Delay animations for alternating images */
+.row:nth-child(even) .product-img-container {
+  animation-delay: 0.5s;
+}
+
+.product-img-container {
+  position: relative;
+}
+
+.position-absolute h3 {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.vertical-bullets {
+  text-align: left;
+  display: inline-block;
+  /* Keep this for larger screens */
+  margin: 0 auto;
+  padding-left: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.vertical-bullets li {
+  margin-bottom: 8px;
+  list-style-type: none;
+  position: relative;
+  padding-left: 15px;
+}
+
+.vertical-bullets li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .vertical-bullets {
+    display: block;
+    /* Change to block for vertical alignment */
+    text-align: left;
+    /* Align text to the left */
+    padding-left: 0;
+    /* Remove left padding */
+  }
+
+  .vertical-bullets li {
+    display: block;
+    /* Ensure each bullet is on a new line */
+    margin: 0 0 10px;
+    /* Adjust margin for spacing */
   }
 }
