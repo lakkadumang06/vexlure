@@ -138,7 +138,7 @@ h6,
 
 h1,
 .mil-h1 {
-  font-size: 86px;
+  font-size: 78px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -147,13 +147,21 @@ h1,
   .mil-h1 {
     font-size: 74px;
   }
+
+  .mil-mb-30 {
+    margin-bottom: 30px !important;
+  }
 }
 
 @media screen and (max-width: 1200px) {
 
   h1,
   .mil-h1 {
-    font-size: 72px;
+    font-size: 70px;
+  }
+
+  .mil-mb-30 {
+    margin-bottom: 30px !important;
   }
 }
 
@@ -161,7 +169,7 @@ h1,
 
   h1,
   .mil-h1 {
-    font-size: 58px;
+    font-size: 48px;
   }
 }
 
@@ -347,7 +355,7 @@ blockquote {
 
 .mil-upper {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 2px;
 }
@@ -917,12 +925,24 @@ spaces
   margin-bottom: 30px;
 }
 
+.mil-mb-40 {
+  margin-bottom: 40px;
+}
+
+.mil-mb-45 {
+  margin-bottom: 45px;
+}
+
 .mil-mb-60 {
   margin-bottom: 60px;
 }
 
 .mil-mb-90 {
   margin-bottom: 90px;
+}
+
+.mil-mb-105 {
+  margin-bottom: 105px;
 }
 
 .mil-mb-120 {
@@ -2021,7 +2041,9 @@ banner
 }
 
 .mil-portrait-frame .mil-nimbus {
-  background: radial-gradient(50% 50% at 50% 50%, rgb(255, 152, 0) 0%, rgba(250, 168, 69, 0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgb(255, 152, 0) 0%,
+      rgba(250, 168, 69, 0) 100%);
   width: 100%;
   padding-bottom: 100%;
   position: absolute;
@@ -2723,10 +2745,10 @@ services
   padding-right: 30px;
 }
 
-.mil-service-card-lg.mil-offset {
+/* .mil-service-card-lg.mil-offset {
   margin-top: 60px;
   margin-bottom: 60px;
-}
+} */
 
 @media screen and (max-width: 992px) {
   .mil-service-card-lg.mil-offset {
@@ -3254,6 +3276,7 @@ blog
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
+  justify-content: center;
 }
 
 .mil-labels .mil-label {
@@ -4767,16 +4790,13 @@ html.is-animating .mil-menu-frame {
   transition-delay: 0.3s;
 }
 
-
 .footer {
   position: relative;
   background-image: url(../img/photo/bg-map.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
-
 
 .footer:before {
   content: "";
@@ -4856,7 +4876,7 @@ html.is-animating .mil-menu-frame {
 }
 
 .mil-subscribe-form .mil-loading:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -4917,6 +4937,20 @@ html.is-animating .mil-menu-frame {
   color: #333;
 }
 
+.mil-header-sticky-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.mil-header-sticky-bg h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
 /* small-pb-0 */
 @media (max-width: 434px) {
   .mil-banner .mil-banner-content {
@@ -4929,8 +4963,6 @@ html.is-animating .mil-menu-frame {
 }
 
 @media (max-width: 376px) {
-
-
   .mil-mb-60 {
     margin-bottom: 0px !important;
   }
@@ -4943,7 +4975,9 @@ html.is-animating .mil-menu-frame {
   padding: 40px 15px;
   overflow: visible;
   /* Changed from hidden to visible */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05));
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -5024,7 +5058,7 @@ html.is-animating .mil-menu-frame {
 }
 
 .product-info h5:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 50%;
@@ -5084,7 +5118,6 @@ html.is-animating .mil-menu-frame {
 }
 
 @media (max-width: 768px) {
-
   .product-card {
     flex: 0 0 calc(50% - 22.5px);
     background: #fff;

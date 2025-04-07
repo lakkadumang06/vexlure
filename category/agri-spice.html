@@ -17,23 +17,42 @@
     <meta property="og:title" content="Products - Vexlure International">
     <meta property="og:description"
         content="Premium agricultural products from Vexlure International. Explore our range of high-quality spices, nuts, and agricultural commodities for international trade.">
-    <meta property="og:image" content="img/logo.png">
+    <meta property="og:image" content="../img/logo.png">
     <meta property="og:url" content="https://vexlureinternational.com/products">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://vexlureinternational.com/products">
 
     <!-- bootstrap grid css -->
-    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/plugins/bootstrap-grid.css">
     <!-- font awesome css -->
-    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/plugins/font-awesome.min.css">
     <!-- swiper css -->
-    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="../css/plugins/swiper.min.css">
     <!-- fancybox css -->
-    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <link rel="stylesheet" href="../css/plugins/fancybox.min.css">
     <!-- vexlure scss -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- page name -->
     <title>Vexlure International - Products</title>
+
+    <!-- Preload Scripts -->
+    <link rel="preload" href="../js/plugins/jquery.min.js" as="script">
+    <link rel="preload" href="../js/plugins/swup.min.js" as="script">
+    <link rel="preload" href="../js/plugins/gsap.min.js" as="script">
+
+    <!-- Add this style section in the head -->
+    <style>
+        .mil-frame-top {
+            width: 100%;
+            z-index: 9999;
+            transition: background-color 0.3s ease;
+        }
+
+        .mil-frame-top.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 
 </head>
 
@@ -56,11 +75,11 @@
         <!-- cursor end -->
 
         <!-- preloader -->
-        <div class="mil-preloader">
+        <!-- <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
                     <p class="mil-h3 mil-muted mil-thin">Bridging Boundaries</p>
-                    <p class="mil-h3 mil-muted">Building Trust</p>
+                    <p class="mil-h3 mil-muted ">Building Trust</p>
                 </div>
                 <div class="mil-pos-abs mil-animation-2">
                     <div class="mil-reveal-frame">
@@ -69,7 +88,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -94,10 +113,10 @@
                         <div class="col-xl-12">
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
-                                    <li class="mil-has-children">
+                                    <li class="mil-has-children mil-active">
                                         <a href="home.html">Home</a>
                                     </li>
-                                    <li class="mil-has-children mil-active">
+                                    <li class="mil-has-children">
                                         <a href="product.html">Products</a>
                                     </li>
                                     <li class="mil-has-children">
@@ -130,7 +149,7 @@
                 </div>
             </div>
             <div class="mil-frame-bottom">
-                <div class="mil-current-page"></div>
+                <div class="mil-current-page"> </div>
                 <div class="mil-back-to-top">
                     <a href="#top" class="mil-link mil-dark mil-arrow-place">
                     </a>
@@ -143,177 +162,57 @@
         <div class="mil-content">
             <div id="swupMain" class="mil-main-transition">
 
-                <!-- banner -->
-                <div class="mil-inner-banner">
-                    <div class="mil-banner-content mil-up">
+                <!-- Introduction -->
+                <section class="homepage mil-banner mil-dark-bg">
+                    <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
-                            <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6"
-                                data-value-2="1.4"></div>
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6">
+                            </div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1"></div>
+                            <div class="mil-animation mil-position-3 mil-scale" data-value-1="1.2" data-value-2=".1">
+                            </div>
                         </div>
+
+                        <div class="mil-gradient"></div>
+
                         <div class="container">
-                            <ul class="mil-breadcrumbs mil-mb-60">
-                                <li><a href="home.html">Home</a></li>
-                                <li><a href="product.html">Products</a></li>
-                            </ul>
-                            <h1 class="mil-mb-60">Vexlure International <br> Products</h1>
-                            <a href="#product" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
-                                <span>Our Products</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- banner end -->
+                            <div class="mil-banner-content mil-up small-pb-0">
 
-                <!-- portfolio -->
-                <section id="product">
-                    <div class="container mil-portfolio mil-p-120-60">
+                                <h1 class="mil-muted mil-thin  mil-mb-30">Welcome to <span class="mil-bold">Vexlure
+                                        International</span>
+                                </h1>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12">
 
-                        <div class="mil-lines-place"></div>
-                        <div class="mil-lines-place mil-lines-long"></div>
+                                        <p class="mil-light-soft mil-mb-10">At Vexlure International, we are dedicated
+                                            to bridging global markets and delivering quality products from India to the
+                                            world. With a strong foundation in Surat, India, and an expanding presence
+                                            in Munich, Germany, we specialize in bulk and container exports, catering to
+                                            businesses worldwide.
+                                        </p>
 
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-lg-5">
+                                        <p class="mil-light-soft mil-mb-10">Our commitment to quality, integrity, and
+                                            reliability drives us to build lasting partnerships across borders. Whether
+                                            you need product sourcing, secure logistics, or compliance support, we
+                                            ensure a seamless export experience backed by secure payment options like LC
+                                            and advance payments.
+                                        </p>
 
-                                <a href="" class="mil-portfolio-item mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-vert mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/photo/Dry-Ginger.png" alt="cover">
-                                        </div>
+                                        <p class="mil-light-soft mil-mb-30">Partner with us for a trusted global trade
+                                            experience. Let's expand horizons together!
+                                        </p>
                                     </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <!-- <div class="mil-label mil-upper mil-accent">Branding</div> -->
-                                            <div class="mil-label mil-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="mil-up">Ginger</h4>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-6">
-
-                                <a href="" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60"
-                                    data-value-2="-60">
-                                    <div class="mil-cover-frame mil-hori mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/photo/Nutmeg.png" alt="cover">
-                                        </div>
-                                    </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <!-- <div class="mil-label mil-upper mil-accent">Design</div> -->
-                                            <div class="mil-label mil-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="mil-up">Nutmeg</h4>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-6">
-
-                                <a href="" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60"
-                                    data-value-2="-60">
-                                    <div class="mil-cover-frame mil-hori mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/photo/Blanched-Peanuts.png" alt="cover">
-                                        </div>
-                                    </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <!-- <div class="mil-label mil-upper mil-accent">Design</div> -->
-                                            <div class="mil-label mil-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="mil-up">Blanched Peanuts</h4>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-5">
-
-                                <a href="" class="mil-portfolio-item mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-vert mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/photo/peanute.png" alt="cover">
-                                        </div>
-                                    </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <!-- <div class="mil-label mil-upper mil-accent">Photography</div> -->
-                                            <div class="mil-label mil-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="mil-up">Peanuts</h4>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-5">
-
-                                <a href="" class="mil-portfolio-item mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-vert mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/photo/Clove.png" alt="cover">
-                                        </div>
-                                    </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <!-- <div class="mil-label mil-upper mil-accent">Design</div> -->
-                                            <div class="mil-label mil-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="mil-up">Clove</h4>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-6">
-
-                                <a href="" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60"
-                                    data-value-2="-60">
-                                    <div class="mil-cover-frame mil-hori mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/photo/Oregano.png" alt="cover">
-                                        </div>
-                                    </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <!-- <div class="mil-label mil-upper mil-accent">Design</div> -->
-                                            <div class="mil-label mil-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="mil-up">Oregano</h4>
-                                    </div>
-                                </a>
-
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- portfolio end -->
-
-                <!-- call to action -->
-                <section class="mil-soft-bg">
-                    <div class="container mil-p-120-120">
-                        <div class="row">
-                            <div class="col-lg-10">
-
-                                <span class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up">Looking to make
-                                    your mark? We'll help you turn <br> your project into a success story.</span>
-
-                            </div>
-                        </div>
-                        <div class="mil-center">
-                            <h2 class="mil-up mil-mb-60">Ready to bring your <span class="mil-thin">ideas to</span>
-                                life? <br> We're <span class="mil-thin">here to help</span></h2>
-                            <div class="mil-up"><a href="contact-us.html"
-                                    class="mil-button mil-arrow-place"><span>Contact
-                                        us</span></a></div>
-                        </div>
-                    </div>
-                </section>
-                <!-- call to action end -->
+                <!-- Introduction end -->
 
                 <!-- footer -->
                 <footer class="footer ">
                     <div class="mi-invert-fix">
-                        <div class="container mil-p-120-60">
+                        <div class="container mil-p-120-0">
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
 
@@ -341,10 +240,10 @@
 
                                             <nav class="mil-footer-menu mil-mb-60">
                                                 <ul>
-                                                    <li class="mil-up ">
+                                                    <li class="mil-up mil-active ">
                                                         <a href="home.html">Home</a>
                                                     </li>
-                                                    <li class="mil-up mil-active">
+                                                    <li class="mil-up ">
                                                         <a href="product.html">Products</a>
                                                     </li>
                                                     <li class="mil-up ">
@@ -363,9 +262,12 @@
                                         <div class="col-md-6 col-lg-5">
 
                                             <ul class="mil-menu-list mil-up mil-mb-60">
-                                                <li><a href="privacy-policy.html" class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="terms-and-conditions.html" class="mil-light-soft">Terms & Conditions</a></li>
-                                                <li><a href="cookie-policy.html" class="mil-light-soft">Cookie Policy</a></li>
+                                                <li><a href="privacy-policy.html" class="mil-light-soft">Privacy
+                                                        Policy</a></li>
+                                                <li><a href="terms-and-conditions.html" class="mil-light-soft">Terms &
+                                                        Conditions</a></li>
+                                                <li><a href="cookie-policy.html" class="mil-light-soft">Cookie
+                                                        Policy</a></li>
                                                 <li><a href="career.html" class="mil-light-soft">Careers</a></li>
                                             </ul>
 
@@ -384,10 +286,12 @@
                                             <h6 class="mil-muted mil-up mil-mb-30">India </h6>
 
                                             <p class="mil-light-soft mil-up"><i class="fas fa-map-marker-alt"
-                                                    style="margin-right: 10px;"></i>Patel Chambers 108,<br />395006
+                                                    style="margin-right: 10px;"></i>Patel Chambers 108,<br /><i
+                                                    class=" " style="margin-right: 22px; ">
+                                                </i>395006
                                                 Surat.
                                                 <span class="mil-no-wrap"><i class="fa fa-phone"
-                                                        style="margin-right: 10px; transform: rotateY(180deg);"></i>+91
+                                                        style="margin-right: 6px; transform: rotateY(180deg);"></i>+91
                                                     83206 59236 </span>
                                             </p>
 
@@ -397,10 +301,12 @@
                                             <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
 
                                             <p class="mil-light-soft mil-up"> <i class="fas fa-map-marker-alt"
-                                                    style="margin-right: 10px;"></i>Heiglhofstraße 66, <br /> 81377
+                                                    style="margin-right: 10px;"></i>Heiglhofstraße 66, <br /><i
+                                                    class=" " style="margin-right: 22px; ">
+                                                </i>81377
                                                 Munich.
                                                 <span class="mil-no-wrap"><i class="fa fa-phone"
-                                                        style="margin-right: 10px; transform: rotateY(180deg);"></i>+49
+                                                        style="margin-right: 6px; transform: rotateY(180deg);"></i>+49
                                                     15566 345594 </span>
                                             </p>
 
@@ -409,12 +315,9 @@
 
                                 </div>
 
-                                <div class="col-md-4 col-lg-6 mil-mb-60">
-
-
-
+                                <div class="col-md-4 col-lg-6 mil-mb-30">
                                     <div class="mil-vert-between">
-                                        <div class="mil-mb-30">
+                                        <div class="mil-mb-60">
                                             <div class="mil-mb-30">
                                                 <h6 class="mil-muted mil-up mil-mb-30">For Support</h6>
                                                 <p class=" mil-light-soft mil-up" style="margin-bottom: 10px;">
@@ -426,14 +329,18 @@
                                             </div>
                                             <ul class="mil-social-icons">
                                                 <!-- mil-up -->
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="https://facebook.com/vexlureinternational" target="_blank"
+                                                        class="social-icon" aria-label="Facebook">
+                                                        <i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="https://twitter.com/vexlureint" target="_blank"
+                                                        class="social-icon" aria-label="Twitter">
+                                                        <i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com/vexlureinternational" target="_blank"
+                                                        class="social-icon" aria-label="Instagram">
+                                                        <i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="https://linkedin.com/company/vexlure-international"
+                                                        target="_blank" class="social-icon" aria-label="LinkedIn">
+                                                        <i class="fab fa-linkedin-in"></i></a></li>
                                             </ul>
                                         </div>
                                         <p class="mil-light-soft">© Copyright 2025 - Vexlure International, All
@@ -451,13 +358,6 @@
                 <!-- hidden elements -->
                 <div class="mil-hidden-elements">
                     <div class="mil-dodecahedron">
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
                         <div class="mil-pentagon">
                             <div></div>
                             <div></div>
@@ -572,24 +472,47 @@
     </div>
     <!-- wrapper end -->
 
-    <!-- jQuery js -->
-    <script src="js/plugins/jquery.min.js"></script>
+    <!-- Scripts -->
+    <script src="../js/plugins/jquery.min.js"></script>
     <!-- swup js -->
-    <script src="js/plugins/swup.min.js"></script>
+    <script src="../js/plugins/swup.min.js"></script>
     <!-- swiper js -->
-    <script src="js/plugins/swiper.min.js"></script>
+    <script src="../js/plugins/swiper.min.js"></script>
     <!-- fancybox js -->
-    <script src="js/plugins/fancybox.min.js"></script>
+    <script src="../js/plugins/fancybox.min.js"></script>
     <!-- gsap js -->
-    <script src="js/plugins/gsap.min.js"></script>
+    <script src="../js/plugins/gsap.min.js"></script>
     <!-- scroll smoother -->
-    <script src="js/plugins/smooth-scroll.js"></script>
+    <script src="../js/plugins/smooth-scroll.js"></script>
     <!-- scroll trigger js -->
-    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <script src="../js/plugins/ScrollTrigger.min.js"></script>
     <!-- scroll to js -->
-    <script src="js/plugins/ScrollTo.min.js"></script>
+    <script src="../js/plugins/ScrollTo.min.js"></script>
+
+
+
     <!-- vexlure js -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.mil-frame-top');
+            const scrollThreshold = 100;
+
+            function handleScroll() {
+                if (window.scrollY > scrollThreshold) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            // Check initial scroll position
+            handleScroll();
+        });
+    </script>
 
 </body>
 

@@ -366,16 +366,16 @@ $(function () {
             .timeline()
             .from(box, {
                 height: 0,
-                duration: 0.2,
+                duration: 0.4,
                 ease: "sine"
             })
             .from(minusElement, {
-                duration: 0.2,
+                duration: 0.4,
                 autoAlpha: 0,
                 ease: "none",
             }, 0)
             .to(plusElement, {
-                duration: 0.2,
+                duration: 0.4,
                 autoAlpha: 0,
                 ease: "none",
             }, 0)
@@ -593,9 +593,10 @@ $(function () {
     appearance.forEach((section) => {
         gsap.set(section, {
             opacity: 0,
-            y: 40,
-            scale: 0.98,
-            visibility: 'hidden'
+            y: 60,
+            scale: 0.95,
+            visibility: 'hidden',
+            willChange: 'transform, opacity'
         });
     });
 
@@ -606,12 +607,15 @@ $(function () {
             y: 0,
             scale: 1,
             visibility: 'visible',
-            duration: 0.6,
-            ease: 'power2.out',
+            duration: 0.8,
+            ease: 'power3.out',
             scrollTrigger: {
                 trigger: section,
-                start: 'top 80%',
+                start: 'top 85%',
+                end: 'top 15%',
                 toggleActions: 'play none none reverse',
+                once: false,
+                markers: false
             }
         });
     });
@@ -914,6 +918,7 @@ $(function () {
                 ScrollTrigger.refresh()
             },
         });
+
         /***************************
 
          menu
@@ -922,6 +927,7 @@ $(function () {
         $('.mil-menu-btn').removeClass('mil-active');
         $('.mil-menu').removeClass('mil-active');
         $('.mil-menu-frame').removeClass('mil-active');
+
         /***************************
 
         append
@@ -1230,12 +1236,12 @@ $(function () {
             protect: true
         });
         $.fancybox.defaults.hash = false;
+
         /***************************
 
         reviews slider
 
         ***************************/
-
         var menu = ['<div class="mil-custom-dot mil-slide-1"></div>', '<div class="mil-custom-dot mil-slide-2"></div>', '<div class="mil-custom-dot mil-slide-3"></div>', '<div class="mil-custom-dot mil-slide-4"></div>', '<div class="mil-custom-dot mil-slide-5"></div>', '<div class="mil-custom-dot mil-slide-6"></div>', '<div class="mil-custom-dot mil-slide-7"></div>']
         var mySwiper = new Swiper('.mil-reviews-slider', {
             // If we need pagination
@@ -1253,7 +1259,7 @@ $(function () {
                 nextEl: '.mil-revi-next',
                 prevEl: '.mil-revi-prev',
             },
-        })
+        });
 
         /***************************
 
@@ -1299,6 +1305,7 @@ $(function () {
                 type: 'fraction',
             },
         });
+
         /***************************
 
         1 item slider
@@ -1318,6 +1325,7 @@ $(function () {
                 type: 'fraction',
             },
         });
+
         /***************************
 
         2 item slider
@@ -1342,7 +1350,5 @@ $(function () {
                 },
             },
         });
-
     });
-
 });

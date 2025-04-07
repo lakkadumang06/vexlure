@@ -51,6 +51,20 @@
     <link rel="preload" href="js/plugins/swup.min.js" as="script">
     <link rel="preload" href="js/plugins/gsap.min.js" as="script">
 
+    <!-- Add this style section in the head -->
+    <style>
+        .mil-frame-top {
+            width: 100%;
+            z-index: 9999;
+            transition: background-color 0.3s ease;
+        }
+
+        .mil-frame-top.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -72,7 +86,7 @@
         <!-- cursor end -->
 
         <!-- preloader -->
-        <div class="mil-preloader">
+        <!-- <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
                     <p class="mil-h3 mil-muted mil-thin">Bridging Boundaries</p>
@@ -85,7 +99,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -146,9 +160,9 @@
                 </div>
             </div>
             <div class="mil-frame-bottom">
-                <div class="mil-current-page"></div>
+                <div class="mil-current-page"> </div>
                 <div class="mil-back-to-top">
-                    <a herf="#top" class="mil-link mil-dark mil-arrow-place">
+                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
                     </a>
                 </div>
             </div>
@@ -175,11 +189,11 @@
                         <div class="container">
                             <div class="mil-banner-content mil-up small-pb-0">
 
-                                <h1 class="mil-muted mil-thin mil-mb-60">Welcome to <br /><span class="mil-bold">Vexlure
+                                <h1 class="mil-muted mil-thin  mil-mb-30">Welcome to <span class="mil-bold">Vexlure
                                         International</span>
                                 </h1>
                                 <div class="row">
-                                    <div class="col-md-7 col-lg-12">
+                                    <div class="col-md-12 col-lg-12">
 
                                         <p class="mil-light-soft mil-mb-10">At Vexlure International, we are dedicated
                                             to bridging global markets and delivering quality products from India to the
@@ -216,7 +230,8 @@
                         <div class="row justify-content-center align-items-center mil-p-120-30">
                             <div class="col-12">
                                 <div class="mil-mb-90">
-                                    <h2 class="mil-up mil-mb-60">- Industries <span class="mil-thin"> We Serve</span>
+                                    <h2 class="mil-up mil-thin mil-mb-60">Industries <span class="mil-thin"> We
+                                            Serve</span>
                                     </h2>
                                 </div>
                             </div>
@@ -281,7 +296,7 @@
                         <div class="container mil-p-120-0">
 
                             <div class="mil-mb-120">
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-lg-10">
 
                                         <span class="mil-suptitle mil-light-soft mil-suptitle-right mil-up">
@@ -289,18 +304,18 @@
                                         </span>
 
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="mil-complex-text justify-content-center mil-up mil-mb-15">
 
-                                    <h2 class="mil-h1 mil-muted mil-center">Why </span>
+                                    <h2 class="mil-h1 mil-muted mil-center mil-thin">Why Choose Us? </span>
                                     </h2>
 
                                 </div>
                                 <div class="mil-complex-text justify-content-center mil-up">
 
-                                    <h2 class="mil-h1 mil-muted mil-center">Choose <span class="mil-thin">Us?</span>
-                                    </h2>
+                                    <!-- <h2 class="mil-h1 mil-muted mil-center">Choose <span class="mil-thin">Us?</span>
+                                    </h2> -->
                                     <a href="contact-us.html"
                                         class="mil-services-button mil-button mil-arrow-place"><span>Contact
                                             Us</span></a>
@@ -312,7 +327,7 @@
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
                                     <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Quality Assurance:</h5>
+                                        <h5 class="mil-muted mil-mb-30">Quality assurance:</h5>
                                         <p class="mil-light-soft mil-mb-30">We source and distribute agricultural
                                             products to our clients, ensuring a seamless and efficient supply chain.We
                                             prioritize top-grade quality across all our products. Rigorous quality
@@ -325,7 +340,7 @@
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
                                     <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Global Network:</h5>
+                                        <h5 class="mil-muted mil-mb-30">Global network:</h5>
                                         <p class="mil-light-soft mil-mb-30">With a strong presence in Surat, India, and
                                             Munich, Germany, our extensive network spans multiple countries, enabling us
                                             to cater to diverse markets and meet global demands.
@@ -336,7 +351,7 @@
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
                                     <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Timely Delivery:</h5>
+                                        <h5 class="mil-muted mil-mb-30">Timely delivery:</h5>
                                         <p class="mil-light-soft mil-mb-30">We understand the value of time in the
                                             international market. Our efficient logistics and supply chain management
                                             ensure that your orders are delivered on schedule, every time.
@@ -347,7 +362,7 @@
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
                                     <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Compliance Expertise:</h5>
+                                        <h5 class="mil-muted mil-mb-30">Compliance expertise:</h5>
                                         <p class="mil-light-soft mil-mb-30">We strictly adhere to all necessary export
                                             documentation, certifications, and international trade regulations. Our
                                             expertise minimizes risks and ensures smooth transactions.
@@ -358,7 +373,7 @@
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
                                     <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Secure Payment Options:</h5>
+                                        <h5 class="mil-muted mil-mb-30">Secure payment options:</h5>
                                         <p class="mil-light-soft mil-mb-30">To safeguard your investments, we offer
                                             secure payment options like Letter of Credit (LC) and Advance Payments,
                                             ensuring reliability and trust.
@@ -370,7 +385,7 @@
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
                                     <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Customized Solutions:</h5>
+                                        <h5 class="mil-muted mil-mb-30">Customized solutions:</h5>
                                         <p class="mil-light-soft mil-mb-30">We adapt to your business needs, offering
                                             tailored solutions for specific product requirements, packaging, and
                                             shipping preferences.
@@ -382,7 +397,7 @@
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
                                     <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Dedicated Support:
+                                        <h5 class="mil-muted mil-mb-30">Dedicated support:
                                         </h5>
                                         <p class="mil-light-soft mil-mb-30">Our experienced team provides dedicated
                                             support to guide you through the process — from inquiry to delivery —
@@ -401,17 +416,19 @@
                 <section class="mil-soft-bg">
                     <div class="container mil-p-120-120">
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-lg-10">
 
                                 <span class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up"> Customer reviews
                                     are a valuable source <br>of information for both businesses and consumers.</span>
 
                             </div>
-                        </div>
+                        </div> -->
 
-                        <h2 class="mil-center mil-up mil-mb-60">Customer <span class="mil-thin">Voices:</span> <br>Hear
-                            What <span class="mil-thin">They Say!</span></h2>
+                        <h2 class="mil-center mil-up mil-mb-60 mil-thin">Customer <span class="mil-thin">voices:</span>
+                            <br>Hear
+                            what <span class="mil-thin">they say!</span>
+                        </h2>
 
                         <div class="mil-revi-pagination mil-up mil-mb-60"></div>
 
@@ -528,7 +545,8 @@
                     <div class="container mil-p-0-120">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="mil-center mil-up mil-mb-60">Our <span class="mil-thin">Products</span></h2>
+                                <h2 class="mil-center mil-up mil-mb-60 mil-thin">Our <span
+                                        class="mil-thin">products</span></h2>
                             </div>
                         </div>
                         <div class="product-slider-container">
@@ -605,7 +623,7 @@
                     <div class="container mil-p-120-60">
                         <div class="row align-items-center mil-mb-30">
                             <div class="col-lg-6 mil-mb-30">
-                                <h3 class="mil-up">Our Products:</h3>
+                                <h3 class="mil-up mil-thin">Our products:</h3>
                             </div>
                             <div class="col-lg-6 mil-mb-30">
                                 <div class="mil-adaptive-right mil-up">
@@ -629,15 +647,17 @@
                                             <div class="mil-label mil-upper mil-accent">Activated Charcoal</div>
                                             <div class="mil-label mil-upper">may 24 2023</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Activated charcoal
+                                        <h4 class="mil-up mil-mb-30 text-center">Activated charcoal
                                         </h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">Activated charcoal is a fine, black
+                                        <p class="mil-post-text mil-up mil-mb-30 text-center">Activated charcoal is a
+                                            fine, black
                                             powder made from carbon-rich materials like wood or coconut shells,
                                             processed to increase its absorbency. It is commonly used for
                                             detoxification, poison treatment, and digestive health, as it binds toxins
                                             and gases in the body. It is also used in skincare and water filtration.
                                         </p>
-                                        <div class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <div
+                                            class="mil-link mil-dark mil-arrow-place mil-up d-flex justify-content-center">
                                             <span>View Product</span>
                                         </div>
                                     </div>
@@ -657,16 +677,18 @@
                                             <div class="mil-label mil-upper mil-accent">Psyllium Husk</div>
                                             <div class="mil-label mil-upper">may 24 2023</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Psyllium Husk
+                                        <h4 class="mil-up mil-mb-30 text-center">Psyllium Husk
                                         </h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">Psyllium husk is a natural fiber
+                                        <p class="mil-post-text mil-up mil-mb-30 text-center">Psyllium husk is a natural
+                                            fiber
                                             derived from the seeds of the Plantago ovata plant. It is commonly used as a
                                             dietary supplement to promote digestive health, relieve constipation, and
                                             support heart health by lowering cholesterol levels. It absorbs water,
                                             forming a gel-like consistency that aids in digestion and regulates bowel
                                             movements.
                                         </p>
-                                        <div class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <div
+                                            class="mil-link mil-dark mil-arrow-place mil-up d-flex justify-content-center">
                                             <span>View Product</span>
                                         </div>
                                     </div>
@@ -686,9 +708,10 @@
                                             <div class="mil-label mil-upper mil-accent">Pipette Tips</div>
                                             <div class="mil-label mil-upper">may 24 2023</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Pipette Tips
+                                        <h4 class="mil-up mil-mb-30 text-center">Pipette Tips
                                         </h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">Pipette tips are small, disposable
+                                        <p class="mil-post-text mil-up mil-mb-30 text-center">Pipette tips are small,
+                                            disposable
                                             plastic
                                             tubes used to transfer liquid samples between containers. They are designed
                                             to fit snugly onto the tip of a pipette, allowing for precise and accurate
@@ -696,7 +719,8 @@
                                             including
                                             polypropylene, polyethylene, and silicone.
                                         </p>
-                                        <div class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <div
+                                            class="mil-link mil-dark mil-arrow-place mil-up d-flex justify-content-center">
                                             <span>View Product</span>
                                         </div>
                                     </div>
@@ -716,15 +740,17 @@
                                             <div class="mil-label mil-upper mil-accent">Moringa Powder</div>
                                             <div class="mil-label mil-upper">may 24 2023</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Moringa Powder
+                                        <h4 class="mil-up mil-mb-30 text-center">Moringa Powder
                                         </h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">Moringa powder is a fine, green powder
+                                        <p class="mil-post-text mil-up mil-mb-30 text-center">Moringa powder is a fine,
+                                            green powder
                                             made from the leaves of the Moringa tree. It is a popular ingredient in
                                             cooking and baking, and is known for its unique flavor and health benefits.
                                             It is often used in Asian cuisine, and is a popular ingredient in
                                             gingerbread and other sweet treats.
                                         </p>
-                                        <div class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <div
+                                            class="mil-link mil-dark mil-arrow-place mil-up d-flex justify-content-center">
                                             <span>View Product</span>
                                         </div>
                                     </div>
@@ -744,16 +770,18 @@
                                             <div class="mil-label mil-upper mil-accent"> hcl</div>
                                             <div class="mil-label mil-upper">may 24 2023</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30"> hcl
+                                        <h4 class="mil-up mil-mb-30 text-center"> Hcl
                                         </h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">HCL is a chemical compound that is
+                                        <p class="mil-post-text mil-up mil-mb-30 text-center">HCL is a chemical compound
+                                            that is
                                             used in
                                             the production of plastics and other products. It is a popular ingredient in
                                             cooking and baking, and is known for its unique flavor and health benefits.
                                             It is often used in Asian cuisine, and is a popular ingredient in
                                             gingerbread and other sweet treats.
                                         </p>
-                                        <div class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <div
+                                            class="mil-link mil-dark mil-arrow-place mil-up d-flex justify-content-center">
                                             <span>View Product</span>
                                         </div>
                                     </div>
@@ -773,16 +801,18 @@
                                             <div class="mil-label mil-upper mil-accent">Guar Gum</div>
                                             <div class="mil-label mil-upper">may 24 2023</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Guar Gum
+                                        <h4 class="mil-up mil-mb-30 text-center">Guar Gum
                                         </h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">Guar gum is a natural gum derived from
+                                        <p class="mil-post-text mil-up mil-mb-30 text-center">Guar gum is a natural gum
+                                            derived from
                                             the
                                             seeds of the guar plant. It is a popular ingredient in food and beverage
                                             products, and is known for its unique flavor and health benefits. It is
                                             often used in Asian cuisine, and is a popular ingredient in
                                             gingerbread and other sweet treats.
                                         </p>
-                                        <div class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <div
+                                            class="mil-link mil-dark mil-arrow-place mil-up d-flex justify-content-center">
                                             <span>View Product</span>
                                         </div>
                                     </div>
@@ -798,7 +828,7 @@
                 <!-- footer -->
                 <footer class="footer ">
                     <div class="mi-invert-fix">
-                        <div class="container mil-p-120-60">
+                        <div class="container mil-p-120-0">
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
 
@@ -872,10 +902,12 @@
                                             <h6 class="mil-muted mil-up mil-mb-30">India </h6>
 
                                             <p class="mil-light-soft mil-up"><i class="fas fa-map-marker-alt"
-                                                    style="margin-right: 10px;"></i>Patel Chambers 108,<br />395006
+                                                    style="margin-right: 10px;"></i>Patel Chambers 108,<br /><i
+                                                    class=" " style="margin-right: 22px; ">
+                                                </i>395006
                                                 Surat.
                                                 <span class="mil-no-wrap"><i class="fa fa-phone"
-                                                        style="margin-right: 10px; transform: rotateY(180deg);"></i>+91
+                                                        style="margin-right: 6px; transform: rotateY(180deg);"></i>+91
                                                     83206 59236 </span>
                                             </p>
 
@@ -885,10 +917,12 @@
                                             <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
 
                                             <p class="mil-light-soft mil-up"> <i class="fas fa-map-marker-alt"
-                                                    style="margin-right: 10px;"></i>Heiglhofstraße 66, <br /> 81377
+                                                    style="margin-right: 10px;"></i>Heiglhofstraße 66, <br /><i
+                                                    class=" " style="margin-right: 22px; ">
+                                                </i>81377
                                                 Munich.
                                                 <span class="mil-no-wrap"><i class="fa fa-phone"
-                                                        style="margin-right: 10px; transform: rotateY(180deg);"></i>+49
+                                                        style="margin-right: 6px; transform: rotateY(180deg);"></i>+49
                                                     15566 345594 </span>
                                             </p>
 
@@ -897,9 +931,9 @@
 
                                 </div>
 
-                                <div class="col-md-4 col-lg-6 mil-mb-60">
+                                <div class="col-md-4 col-lg-6 mil-mb-30">
                                     <div class="mil-vert-between">
-                                        <div class="mil-mb-30">
+                                        <div class="mil-mb-60">
                                             <div class="mil-mb-30">
                                                 <h6 class="mil-muted mil-up mil-mb-30">For Support</h6>
                                                 <p class=" mil-light-soft mil-up" style="margin-bottom: 10px;">
@@ -911,14 +945,18 @@
                                             </div>
                                             <ul class="mil-social-icons">
                                                 <!-- mil-up -->
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="https://facebook.com/vexlureinternational" target="_blank"
+                                                        class="social-icon" aria-label="Facebook">
+                                                        <i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="https://twitter.com/vexlureint" target="_blank"
+                                                        class="social-icon" aria-label="Twitter">
+                                                        <i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com/vexlureinternational" target="_blank"
+                                                        class="social-icon" aria-label="Instagram">
+                                                        <i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="https://linkedin.com/company/vexlure-international"
+                                                        target="_blank" class="social-icon" aria-label="LinkedIn">
+                                                        <i class="fab fa-linkedin-in"></i></a></li>
                                             </ul>
                                         </div>
                                         <p class="mil-light-soft">© Copyright 2025 - Vexlure International, All
@@ -1144,6 +1182,26 @@
 
     <!-- vexlure js -->
     <script src="js/main.js"></script>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.mil-frame-top');
+            const scrollThreshold = 100;
+
+            function handleScroll() {
+                if (window.scrollY > scrollThreshold) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            // Check initial scroll position
+            handleScroll();
+        });
+    </script>
 
 </body>
 
