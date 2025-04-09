@@ -4974,6 +4974,7 @@ html.is-animating .mil-menu-frame {
   width: 100%;
   padding: 40px 15px;
   overflow: visible;
+  white-space: nowrap;
   /* Changed from hidden to visible */
   background: linear-gradient(to right,
       rgba(255, 255, 255, 0.1),
@@ -4986,7 +4987,7 @@ html.is-animating .mil-menu-frame {
   position: relative;
   width: 100%;
   padding: 20px 0;
-  overflow: hidden;
+  overflow-y: hidden;
   /* Added overflow hidden to wrapper */
 }
 
@@ -4994,7 +4995,7 @@ html.is-animating .mil-menu-frame {
   display: flex;
   gap: 30px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-x: hidden;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   padding: 10px 0;
   position: relative;
