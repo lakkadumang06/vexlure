@@ -45,6 +45,16 @@
     <link rel="preload" href="../js/plugins/gsap.min.js" as="script" />
 
 
+    <style>
+        @media (max-width: 768px) {
+            .mil-up {
+              flex-direction: column !important;
+              border-radius: 30px !important; 
+              padding: 15px !important;
+            }
+            
+          }
+    </style>
 </head>
 
 <body>
@@ -226,15 +236,15 @@
                 <section class="py-3">
                     <div class="container">
                         <!-- Fresh Vegetables & Produce -->
-                        <div class="row align-items-center mb-5 mil-up">
+                        <div class="row align-items-center mb-5 mil-up left">
+
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
-                                <div class="product-img-container">
+                                <div class="product-img-container" style="border-radius: 50%; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
                                     <img src="../img/Fresh Vegetables & Produce.jpg" alt="Fresh Vegetables"
-                                        class="product-img img-fluid rounded">
+                                        class="product-img img-fluid">
                                 </div>
-                                <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin">
-                                    Fresh
-                                    Vegetables & Produce</h3>
+                                <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin mt-1">
+                                    Fresh Vegetables </h3>
                             </div>
                             <div class="col-md-6">
                                 <ul class="list-unstyled text-center text-md-start vertical-bullets">
@@ -248,7 +258,7 @@
                         </div>
 
                         <!-- Oilseeds & Nuts -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse mil-up right">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Oilseeds & Nuts.jpg" alt="Oilseeds & Nuts"
@@ -270,7 +280,7 @@
                         </div>
 
                         <!-- Pulses & Legumes -->
-                        <div class="row align-items-center mb-5 mil-up">
+                        <div class="row align-items-center mb-5 mil-up left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Pulses & Legumes.jpg" alt="Pulses & Legumes"
@@ -281,7 +291,7 @@
                                     Legumes</h3>
                             </div>
                             <div class="col-md-6">
-                                <ul class="list-unstyled text-center text-md-start vertical-bullets">
+                                <ul class="list-unstyled text-center text-md-start vertical-bullets" >
                                     <li>Chickpeas (Kabuli, Desi)</li>
                                     <li>Pigeon Peas (Tur Dal)</li>
                                     <li>Green Gram (Whole, Split)</li>
@@ -292,7 +302,7 @@
                         </div>
 
                         <!-- Grains & Rice -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse mil-up right">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Grains & Rice.jpg" alt="Grains & Rice"
@@ -303,7 +313,7 @@
                                     Rice</h3>
                             </div>
                             <div class="col-md-6">
-                                <ul class="list-unstyled text-center text-md-start vertical-bullets">
+                                <ul class="list-unstyled text-center text-md-start vertical-bullets" >
                                     <li>Basmati Rice (1121, 1509)</li>
                                     <li>Non-Basmati Rice (IR64, Parboiled)</li>
                                     <li>Maize (Yellow Corn)</li>
@@ -314,7 +324,7 @@
                         </div>
 
                         <!-- Whole & Ground Spices -->
-                        <div class="row align-items-center mb-5  mil-up">
+                        <div class="row align-items-center mb-5 mil-up left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Whole & Ground Spices.jpg" alt="Whole & Ground Spices"
@@ -322,10 +332,10 @@
                                 </div>
                                 <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin">
                                     Whole &
-                                    Ground Spices</h3>
+                                    Ground <br> Spices</h3>
                             </div>
                             <div class="col-md-6">
-                                <ul class="list-unstyled text-center text-md-start vertical-bullets">
+                                <ul class="list-unstyled text-center text-md-start vertical-bullets" >
                                     <li>Turmeric (Fingers, Powder)</li>
                                     <li>Cumin Seeds (Whole, Ground)</li>
                                     <li>Chilli (Whole, Powder)</li>
@@ -336,7 +346,7 @@
                         </div>
 
                         <!-- Dry Fruits & Nuts -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse mil-up right">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Dry Fruits & Nuts.jpg" alt="Dry Fruits & Nuts"
@@ -347,7 +357,7 @@
                                     & Nuts</h3>
                             </div>
                             <div class="col-md-6">
-                                <ul class="list-unstyled text-center text-md-start vertical-bullets">
+                                <ul class="list-unstyled text-center text-md-start vertical-bullets" >
                                     <li>Cashews (W180, W240, W320)</li>
                                     <li>Almonds (Whole, Sliced - Imported & Re-exported)</li>
                                     <li>Raisins (Golden, Black)</li>
@@ -358,7 +368,7 @@
                         </div>
 
                         <!-- Natural Fibers & Health Products -->
-                        <div class="row align-items-center mb-5  mil-up">
+                        <div class="row align-items-center mb-5 mil-up left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Natural Fibers & Health Products.jpg"
@@ -369,7 +379,7 @@
                                     Fibers & Health Products</h3>
                             </div>
                             <div class="col-md-6">
-                                <ul class="list-unstyled text-center text-md-start vertical-bullets">
+                                <ul class="list-unstyled text-center text-md-start vertical-bullets" >
                                     <li>Psyllium Husk (Whole, Powder)</li>
                                     <li>Psyllium Seeds</li>
                                     <li>Moringa Powder</li>
@@ -380,7 +390,7 @@
                         </div>
 
                         <!-- Agro Derivatives & Additives -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse mil-up right" >
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Agro Derivatives & Additives.jpg"
@@ -388,10 +398,10 @@
                                 </div>
                                 <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin">
                                     Agro
-                                    Derivatives & Additives</h3>
+                                    Derivatives & <br> Additives</h3>
                             </div>
                             <div class="col-md-6">
-                                <ul class="list-unstyled text-center text-md-start vertical-bullets">
+                                <ul class="list-unstyled text-center text-md-start vertical-bullets" >
                                     <li>Guar Gum (Food Grade, Industrial Grade)</li>
                                     <li>Onion Powder</li>
                                     <li>Garlic Powder</li>

@@ -45,7 +45,16 @@
     <link rel="preload" href="../js/plugins/swup.min.js" as="script">
     <link rel="preload" href="../js/plugins/gsap.min.js" as="script">
 
-
+    <style>
+        @media (max-width: 768px) {
+            .mil-up {
+              flex-direction: column !important;
+              border-radius: 30px !important; 
+              padding: 15px !important;
+            }
+            
+          }
+    </style>
 </head>
 
 <body>
@@ -225,7 +234,7 @@
                 <section class="py-3">
                     <div class="container">
                         <!-- Fabrics (Raw & Processed) -->
-                        <div class="row align-items-center mb-5  mil-up">
+                        <div class="row align-items-center mb-5  mil-up left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Hardware & Fasteners.webp" alt="Hardware & Fasteners"
@@ -243,14 +252,14 @@
                         </div>
 
                         <!-- Lab & Scientific Supplies -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up right">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Lab & Scientific Supplies.jpg" alt="Lab & Scientific Supplies"
                                         class="product-img img-fluid rounded">
                                 </div>
                                 <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin">Lab &
-                                    Scientific Supplies</h3>
+                                    Scientific <br> Supplies</h3>
                             </div>
                             <div class="col-md-6 text-center">
                                 <ul class="list-unstyled vertical-bullets">
@@ -260,7 +269,7 @@
                         </div>
 
                         <!-- Industrial Raw Materials & Additives -->
-                        <div class="row align-items-center mb-5">
+                        <div class="row align-items-center mb-5 left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative  mil-up">
                                 <div class="product-img-container">
                                     <img src="../img/Industrial Raw Materials & Additives.jpg"

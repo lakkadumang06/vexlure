@@ -45,7 +45,16 @@
     <link rel="preload" href="../js/plugins/swup.min.js" as="script">
     <link rel="preload" href="../js/plugins/gsap.min.js" as="script">
 
-
+    <style>
+        @media (max-width: 768px) {
+            .mil-up {
+              flex-direction: column !important;
+              border-radius: 30px !important; 
+              padding: 15px !important;
+            }
+            
+          }
+    </style>
 
 </head>
 
@@ -201,7 +210,7 @@
                 <!-- Introduction end -->
 
                 <!-- garments -->
-                <section class="homepage pb-5">
+                <section class="homepage pb-5 pt-5">
                     <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6">
@@ -226,13 +235,13 @@
                 <section class="py-5 ">
                     <div class="container ">
                         <!-- Fabrics (Raw & Processed) -->
-                        <div class="row align-items-center mb-5  mil-up">
+                        <div class="row align-items-center mb-5  mil-up left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Fabrics (Raw & Processed).webp" alt="Fabrics"
                                         class="product-img img-fluid rounded">
                                 </div>
-                                <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin">Fabrics
+                                <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin">Fabrics 
                                     (Raw & Processed)</h3>
                             </div>
                             <div class="col-md-6 text-center">
@@ -247,7 +256,7 @@
                         </div>
 
                         <!-- Dyed & Printed Fabrics -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up right">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Dyed & Printed Fabrics.jpg" alt="Dyed & Printed Fabrics"
@@ -268,7 +277,7 @@
                         </div>
 
                         <!-- Embroidered & Fancy Fabrics -->
-                        <div class="row align-items-center mb-5  mil-up">
+                        <div class="row align-items-center mb-5  mil-up left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Embroidered & Fancy Fabrics.webp" alt="Embroidered & Fancy Fabrics"
@@ -289,7 +298,7 @@
                         </div>
 
                         <!-- Ready-Made Garments & Ethnic Wear -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up right">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Ready-Made Garments & Ethnic Wear.png"
@@ -310,7 +319,7 @@
                         </div>
 
                         <!-- Home & Utility Textiles -->
-                        <div class="row align-items-center mb-5  mil-up">
+                        <div class="row align-items-center mb-5  mil-up left">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Home & Utility Textiles.png" alt="Home & Utility Textiles"
@@ -331,14 +340,14 @@
                         </div>
 
                         <!-- Industrial & Specialty Textiles -->
-                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up">
+                        <div class="row align-items-center mb-5 flex-md-row-reverse  mil-up right">
                             <div class="col-md-6 mb-4 mb-md-0 text-center position-relative">
                                 <div class="product-img-container">
                                     <img src="../img/Industrial & Specialty Textiles.webp"
                                         alt="Industrial & Specialty Textiles" class="product-img img-fluid rounded">
                                 </div>
                                 <h3 class="position-absolute bottom-0 start-50 translate-middle-x w-100 mb-3 mil-thin">Industrial
-                                    & Specialty Textiles</h3>
+                                    & Specialty <br> Textiles</h3>
                             </div>
                             <div class="col-md-6 text-center">
                                 <ul class="list-unstyled vertical-bullets">

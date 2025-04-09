@@ -2637,8 +2637,8 @@ services
   opacity: 0;
   -webkit-transform: translateY(10px);
   transform: translateY(10px);
-  overflow: hidden;
   display: -webkit-box;
+  padding-bottom: 12px;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -2666,7 +2666,13 @@ services
   transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-.mil-service-card-sm:hover p {
+.mil-service-card-sm .text1 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.mil-service-card-sm:hover .text2 {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -2685,7 +2691,7 @@ services
 }
 
 @media screen and (max-width: 992px) {
-  .mil-service-card-sm p {
+  .mil-service-card-sm .text2 {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -5165,10 +5171,10 @@ html.is-animating .mil-menu-frame {
 .product-img-container {
   width: 350px;
   height: 350px;
-  border-radius: 50%;
-  overflow: hidden;
   margin: 0 auto;
   border: 8px solid #fff;
+  overflow: hidden;
+  border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -5266,9 +5272,10 @@ section.py-5 {
   display: inline-block;
   /* Keep this for larger screens */
   margin: 0 auto;
-  padding-left: 20px;
+  padding-left: 122px;
   font-size: 20px;
   color: black;
+
 }
 
 .vertical-bullets li {
@@ -5300,4 +5307,31 @@ section.py-5 {
     margin: 0 0 10px;
     /* Adjust margin for spacing */
   }
+}
+
+
+.left {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  background: #fff;
+  padding: 20px;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  background: #fff;
+  padding: 20px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
