@@ -1863,6 +1863,12 @@ banner
   height: 100vh;
 }
 
+@media screen and (max-width: 435px) {
+  .mil-banner {
+    height: calc(100vh + 90px);
+  }
+}
+
 .mil-banner .container {
   height: 100%;
   display: -webkit-box;
