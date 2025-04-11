@@ -484,7 +484,7 @@
 
                 <!-- hidden elements -->
                 <div class="mil-hidden-elements">
-                    <div class="mil-dodecahedron">
+                    <div class="mil-dodecahedron" style="opacity: 0; transition: opacity 0.3s ease-in-out;">
                         <div class="mil-pentagon">
                             <div></div>
                             <div></div>
@@ -617,6 +617,18 @@
     <script src="js/plugins/ScrollTo.min.js"></script>
     <!-- vexlure js -->
     <script src="js/main.js"></script>
+
+    <script>
+        // Add this script at the end of your body, before the other script tags
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const dodecahedron = document.querySelector('.mil-dodecahedron');
+                if (dodecahedron) {
+                    dodecahedron.style.opacity = '1';
+                }
+            }, 300); // Small delay to ensure CSS is loaded
+        });
+    </script>
 
 </body>
 
