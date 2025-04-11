@@ -5323,7 +5323,6 @@ section.py-5 {
 
 
 .left {
-  transform: translate(0px, 0px);
   opacity: 1;
   background: #fff;
   padding: 20px;
@@ -5331,12 +5330,18 @@ section.py-5 {
   border-bottom-left-radius: 999px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translate(0px, 0px) scale(1);
+}
+
+.left:hover {
+  transform: translate(0px, 0px) scale(1.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .right {
-  transform: translate(0px, 0px);
+  transform: translate(0px, 0px) scale(1);
   opacity: 1;
   background: #fff;
   padding: 20px;
@@ -5344,6 +5349,11 @@ section.py-5 {
   border-bottom-left-radius: 100px;
   border-top-right-radius: 999px;
   border-bottom-right-radius: 999px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right:hover {
+  transform: translate(0px, 0px) scale(1.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
