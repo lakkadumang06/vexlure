@@ -1327,7 +1327,7 @@ frame
 
   .mil-frame {
     padding: 24px 30px 60px 30px;
-   
+
   }
 
   .mil-frame {
@@ -1344,28 +1344,29 @@ frame
 }
 
 /* @media screen and (max-width: 1200px) { */
-  .mil-frame .mil-frame-top {
-    padding:0px 30px 0px 30px;
-    height: 90px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(9px);
-    backdrop-filter: blur(9px);
-  }
+.mil-frame .mil-frame-top {
+  padding: 0px 30px 0px 30px;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+}
 
-  .mil-frame .mil-frame-top .mil-logo {
-    color: rgb(255, 255, 255);
-  }
+.mil-frame .mil-frame-top .mil-logo {
+  color: rgb(255, 255, 255);
+}
 
-  .mil-frame .mil-frame-top .mil-menu-btn span,
-  .mil-frame .mil-frame-top .mil-menu-btn span:after,
-  .mil-frame .mil-frame-top .mil-menu-btn span:before {
-    background: rgb(255, 255, 255);
-  }
+.mil-frame .mil-frame-top .mil-menu-btn span,
+.mil-frame .mil-frame-top .mil-menu-btn span:after,
+.mil-frame .mil-frame-top .mil-menu-btn span:before {
+  background: rgb(255, 255, 255);
+}
+
 /* } */
 
 .mil-frame .mil-frame-bottom {
-  padding:0px 30px 60px 30px;
+  padding: 0px 30px 60px 30px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4976,7 +4977,7 @@ html.is-animating .mil-menu-frame {
 
 @media (max-width: 376px) {
   .mil-mb-60 {
-    margin-bottom: 0px !important;
+    margin-bottom: 15px !important;
   }
 }
 
